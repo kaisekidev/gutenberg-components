@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "stylelint-config-woda",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "custom-property-no-missing-var-function": null,
+    "function-no-unknown": null,
+    "no-empty-first-line": null,
+    "unit-no-unknown": null,
+    "value-keyword-case": null
+  },
+  "customSyntax": "@stylelint/postcss-css-in-js"
+}
