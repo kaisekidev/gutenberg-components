@@ -575,8 +575,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kaiseki/gutenberg-hooks@file:.yalc/@kaiseki/gutenberg-hooks":
-  version "0.0.0"
+"@kaiseki/gutenberg-hooks@0.1.0-alpha1":
+  version "0.1.0-alpha1"
+  resolved "https://registry.yarnpkg.com/@kaiseki/gutenberg-hooks/-/gutenberg-hooks-0.1.0-alpha1.tgz#6ca6378c9b63842d432fca3860771602a33866eb"
+  integrity sha512-ZXnBqWF+m/tMs/O0n5+LYgpdwoZNaP3/YS3II6u/er4gBphbl1ScSu74Rzied8g9YKPSAxYnRI2NucYd/f1a/g==
   dependencies:
     "@wordpress/core-data" "^4.13.0"
     "@wordpress/data" "^6.15.0"
