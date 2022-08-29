@@ -8,6 +8,7 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     'no-shadow': 'off',
+    'react-hooks/exhaustive-deps': 'off',
     '@typescript-eslint/no-shadow': 'error',
   },
 };

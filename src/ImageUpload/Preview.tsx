@@ -4,6 +4,7 @@ import { isBlobURL } from '@wordpress/blob';
 import { MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
 import { DropZone, Button, Spinner, ResponsiveWrapper } from '@wordpress/components';
 import { Schema } from '@wordpress/core-data';
+import { useDispatch } from '@wordpress/data';
 import { mediaUpload } from '@wordpress/editor';
 import { __ } from '@wordpress/i18n';
 import { useCallback, useState } from 'react';
@@ -24,6 +25,8 @@ interface PreviewProps
 
 const instructions = <p>{__('To edit this image, you need permissions to upload media.')}</p>;
 
+const ERROR_NOTICE_ID = 'kaiseki-image-upload-component-error'
+
 export default function Preview({
   value,
   onChange,
@@ -35,6 +38,10 @@ export default function Preview({
 }: PreviewProps) {
   const [isLoading, setIsLoading] = useState(false);
   const { maxUploadFileSize } = useEditorSettings();
+  const {
+    createErrorNotice,
+    removeNotice,
+  } = useDispatch('core/notices');
   const onDropImage = useCallback(
     (filesList: ArrayLike<File>) => {
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
@@ -56,14 +63,17 @@ export default function Preview({
           }
           setIsLoading(false);
         },
-        onError(message) {
-          console.log(message);
-          // noticeOperations.removeAllNotices();
-          // noticeOperations.createErrorNotice( message );
+        onError(error) {
+          const { message } = error;
+          removeNotice(ERROR_NOTICE_ID);
+          createErrorNotice(message, {
+            id: ERROR_NOTICE_ID,
+            isDismissible: false,
+          });
         },
       });
     },
-    [maxUploadFileSize, onChange],
+    [onChange],
   );
 
   const {

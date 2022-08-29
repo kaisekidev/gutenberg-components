@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: \n"
+
+#: gutenberg-components.js:21
+msgid "Copied %s to clipboard"
+msgstr ""
+
+#: gutenberg-components.js:31
+msgid "Copy %s"
+msgstr ""
+
+#: gutenberg-components.js:89
+msgid "Edit or update the image"
+msgstr ""
+
+#: gutenberg-components.js:93
+msgid "Remove item"
+msgstr ""
+
+#: gutenberg-components.js:26
+msgid "Replace image"
+msgstr ""
+
+#: gutenberg-components.js:106
+msgid "Set image "
+msgstr ""
+
+#: gutenberg-components.js:25
+msgid "To edit this image, you need permissions to upload media."
+msgstr ""

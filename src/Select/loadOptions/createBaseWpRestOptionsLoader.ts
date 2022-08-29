@@ -15,7 +15,7 @@ const createBaseWpRestOptionsLoader = <
   },
 ) => {
   const loadOptions: LoadOptions<Option, Group, Additional> = async (search, prevOptions) => {
-    const page = prevOptions === [] ? 1 : prevOptions.length / 10 + 1;
+    const page = !prevOptions ? 1 : prevOptions.length / 10 + 1;
     const {
       options,
       pages,
