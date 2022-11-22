@@ -19,7 +19,7 @@ export default function ControlWrap({
       {help && <Help className="control-wrap__help">{help}</Help>}
     </Wrap>
   );
-};
+}
 
 const Wrap = styled.div`
   width: 100%;
