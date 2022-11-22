@@ -26,9 +26,20 @@ const isFutureDate = (checkDate: Date, includeToday = false) => {
 
 const dateToGmt = (date: string, format: string) => {
   const dateSettings = __experimentalGetSettings();
-  const localDate = moment.tz(date, dateSettings.timezone.string);
-  const gmtDate = localDate.clone().tz('GMT');
-  return gmtDate.format(format);
+  if (dateSettings.timezone.string) {
+    const localDate = moment.tz(date, dateSettings.timezone.string);
+    const gmtDate = localDate.clone().tz('GMT');
+    return gmtDate.format(format);
+  }
+  const momentDate = moment(date);
+  const offset = parseInt(dateSettings.timezone.offset, 10);
+  if (offset > 0) {
+    momentDate.subtract(offset, 'h');
+  }
+  if (offset < 0) {
+    momentDate.add(offset, 'h');
+  }
+  return momentDate.format(format);
 };
 
 export default function DatePicker({

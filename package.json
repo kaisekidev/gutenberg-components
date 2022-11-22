@@ -23,6 +23,7 @@
     "fix:css": "stylelint \"./src/**/*.{ts,tsx}\" --fix",
     "i18n": "yarn gettext-extract && yarn i18n:pot-prep",
     "i18n:pot-prep": "sed \"-i\" \"\" \"-e\" 's/#: [^:]*/#: gutenberg-components.js/g' languages/gutenberg-components.pot",
+    "release": "np",
     "prepare": "yarn run build",
     "prepublishOnly": "yarn run lint",
     "preversion": "yarn run fix"
@@ -107,7 +108,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "gettext-extract": "^2.0.1",
-    "np": "^7.6.2",
+    "np": "*",
     "postcss-scss": "^4.0.4",
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.7.1",

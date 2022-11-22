@@ -25,7 +25,7 @@ interface PreviewProps
 
 const instructions = <p>{__('To edit this image, you need permissions to upload media.')}</p>;
 
-const ERROR_NOTICE_ID = 'kaiseki-image-upload-component-error'
+const ERROR_NOTICE_ID = 'kaiseki-image-upload-component-error';
 
 export default function Preview({
   value,
