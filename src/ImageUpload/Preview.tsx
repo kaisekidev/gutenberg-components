@@ -98,7 +98,7 @@ export default function Preview({
             <ImageButton
               hasImage={hasImage}
               onClick={open}
-              label={!value ? undefined : editOrUpdateLabel ?? __('Edit or update the image')}
+              label={!hasImage ? editOrUpdateLabel ?? __('Edit or update the image') : undefined}
             >
               {hasImage && mediaWidth && mediaHeight && (
                 <ResponsiveWrapper
