@@ -7,3 +7,4 @@ export { default as createTagEntityOptionsLoader } from './loadOptions/createTag
 export { default as createUserEntityOptionsLoader } from './loadOptions/createUserEntityOptionsLoader.js';
 export { default as getReactSelectStyles } from './react-select-styles/getReactSelectStyles.js';
 export { default as getReactSelectTheme } from './react-select-styles/getReactSelectTheme.js';
+export { GroupBase } from 'react-select';
