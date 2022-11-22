@@ -82,6 +82,8 @@ export default function Preview({
     mediaSourceUrl,
   } = getMediaDetails(media, defaultSize);
 
+  const hasImage = !!value && !!mediaSourceUrl;
+
   return (
     <MediaUploadCheck fallback={instructions}>
       <MediaUpload
@@ -94,11 +96,11 @@ export default function Preview({
         render={({ open }) => (
           <Container>
             <ImageButton
-              hasImage={!!value}
+              hasImage={hasImage}
               onClick={open}
               label={!value ? undefined : editOrUpdateLabel ?? __('Edit or update the image')}
             >
-              {!!value && media && mediaWidth && mediaHeight && mediaSourceUrl && (
+              {hasImage && mediaWidth && mediaHeight && (
                 <ResponsiveWrapper
                   naturalWidth={mediaWidth}
                   naturalHeight={mediaHeight}
