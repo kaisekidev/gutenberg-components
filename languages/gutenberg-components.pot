@@ -11,8 +11,12 @@ msgstr ""
 msgid "Copy %s"
 msgstr ""
 
-#: gutenberg-components.js:89
+#: gutenberg-components.js:100
 msgid "Edit or update the image"
+msgstr ""
+
+#: gutenberg-components.js:28
+msgid "Remove image"
 msgstr ""
 
 #: gutenberg-components.js:93
@@ -23,10 +27,10 @@ msgstr ""
 msgid "Replace image"
 msgstr ""
 
-#: gutenberg-components.js:106
-msgid "Set image "
+#: gutenberg-components.js:117
+msgid "Set image"
 msgstr ""
 
-#: gutenberg-components.js:25
+#: gutenberg-components.js:26
 msgid "To edit this image, you need permissions to upload media."
 msgstr ""

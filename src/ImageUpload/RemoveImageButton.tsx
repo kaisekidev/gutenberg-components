@@ -1,5 +1,6 @@
 import { MediaUploadCheck } from '@wordpress/block-editor';
 import { Button } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 import styled from 'styled-components';
 
 interface RemoveImageButtonProps {
@@ -23,9 +24,8 @@ export default function RemoveImageButton({
         onClick={onClick}
         isLink
         isDestructive
-        // className={!!imageId && media && !isResolving ? styles.ButtonBlock : ''}
       >
-        {label}
+        {label ?? __('Remove image')}
       </StyledButton>
     </MediaUploadCheck>
   );

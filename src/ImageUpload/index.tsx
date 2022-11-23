@@ -26,11 +26,13 @@ export default function ImageUpload({
     record: media,
     isResolving,
   } = useMedia(value);
+
   const {
     removeImage,
     replaceImage,
     setImage,
   } = labels || {};
+  const hasMedia = media !== null;
 
   return (
     <Wrap>
@@ -40,14 +42,14 @@ export default function ImageUpload({
         onChange={onChange}
         defaultSize={defaultSize}
       />
-      {!!value && media && !isResolving && (
+      {hasMedia && !isResolving && (
         <ReplaceImageButton
           title={setImage}
           label={replaceImage}
           onSelect={({ id }) => onChange(id)}
         />
       )}
-      {!!value && (
+      {hasMedia && (
         <RemoveImageButton
           label={removeImage}
           onClick={() => onChange(0)}

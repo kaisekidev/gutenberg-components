@@ -76,13 +76,12 @@ export default function Preview({
     [onChange],
   );
 
+  const hasMedia = media !== null;
   const {
     mediaWidth,
     mediaHeight,
     mediaSourceUrl,
   } = getMediaDetails(media, defaultSize);
-
-  const hasImage = !!value && !!mediaSourceUrl;
 
   return (
     <MediaUploadCheck fallback={instructions}>
@@ -96,11 +95,11 @@ export default function Preview({
         render={({ open }) => (
           <Container>
             <ImageButton
-              hasImage={hasImage}
+              hasImage={hasMedia}
               onClick={open}
-              label={!hasImage ? editOrUpdateLabel ?? __('Edit or update the image') : undefined}
+              label={hasMedia ? editOrUpdateLabel ?? __('Edit or update the image') : undefined}
             >
-              {hasImage && mediaWidth && mediaHeight && (
+              {hasMedia && mediaWidth && mediaHeight && (
                 <ResponsiveWrapper
                   naturalWidth={mediaWidth}
                   naturalHeight={mediaHeight}
@@ -115,7 +114,7 @@ export default function Preview({
                 </ResponsiveWrapper>
               )}
               {isLoading && <StyledSpinner />}
-              {!value && (setLabel ?? __('Set image '))}
+              {!hasMedia && (setLabel ?? __('Set image'))}
             </ImageButton>
             <DropZone onFilesDrop={onDropImage} />
           </Container>
