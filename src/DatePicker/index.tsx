@@ -3,7 +3,7 @@ import { __experimentalGetSettings } from '@wordpress/date';
 import moment from 'moment-timezone';
 
 export interface DatePickerProps extends Omit<WpDateTimePicker.Props, 'onChange'> {
-  onChange: (currentDate: string, currentDateGmt: string) => void;
+  onChange: (currentDate: string | null, currentDateGmt: string | null) => void;
   format?: string;
   useMysqlFormat?: boolean;
   isInvalidDate?: (date: Date) => boolean;
@@ -54,11 +54,13 @@ export default function DatePicker({
   ...props
 }: DatePickerProps) {
   const newFormat = format || (useMysqlFormat && MYSQL_FORMAT) || TIMEZONELESS_FORMAT;
+
   return (
     <DateTimePicker
-      onChange={(newDate) => {
-        onChange(moment(newDate).format(newFormat), dateToGmt(newDate, newFormat));
-      }}
+      onChange={(newDate) => newDate
+        ? onChange(moment(newDate).format(newFormat), dateToGmt(newDate, newFormat))
+        : onChange(null, null)
+      }
       currentDate={currentDate}
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore

@@ -1,8 +1,9 @@
 import { format, __experimentalGetSettings } from '@wordpress/date';
+import { __ } from '@wordpress/i18n';
 
 export interface DateButtonLabelProps {
-  currentDate?: string | undefined;
-  fallbackDate?: string | undefined;
+  currentDate?: string;
+  fallbackDate?: string;
   emptyLabel?: string;
   dateFormat?: string;
 }
@@ -14,11 +15,12 @@ export default function DateButtonLabel({
   dateFormat = 'F j, Y',
 }: DateButtonLabelProps) {
   const settings = __experimentalGetSettings();
+  const label = emptyLabel || __('Pick date')
   return (
     <span>
-      {currentDate || !emptyLabel
+      {currentDate
         ? format(dateFormat || settings?.formats?.date, currentDate || fallbackDate || undefined)
-        : emptyLabel}
+        : label}
     </span>
   );
 }
