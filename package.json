@@ -1,6 +1,6 @@
 {
   "name": "@kaiseki/gutenberg-components",
-  "version": "0.1.0-alpha6",
+  "version": "0.1.0-alpha7",
   "license": "MIT",
   "description": "React components for the WordPress Block Editor (Gutenberg)",
   "type": "module",
