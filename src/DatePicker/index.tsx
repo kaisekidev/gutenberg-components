@@ -57,9 +57,10 @@ export default function DatePicker({
 
   return (
     <DateTimePicker
-      onChange={(newDate) => newDate
-        ? onChange(moment(newDate).format(newFormat), dateToGmt(newDate, newFormat))
-        : onChange(null, null)
+      onChange={(newDate) =>
+        newDate
+          ? onChange(moment(newDate).format(newFormat), dateToGmt(newDate, newFormat))
+          : onChange(null, null)
       }
       currentDate={currentDate}
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment

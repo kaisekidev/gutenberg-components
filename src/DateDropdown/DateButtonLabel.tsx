@@ -15,7 +15,7 @@ export default function DateButtonLabel({
   dateFormat = 'F j, Y',
 }: DateButtonLabelProps) {
   const settings = __experimentalGetSettings();
-  const label = emptyLabel || __('Pick date')
+  const label = emptyLabel || __('Pick date');
   return (
     <span>
       {currentDate
