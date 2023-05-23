@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+overrides:
+  react: ^18.2.0
+  react-dom: ^18.2.0
+
 dependencies:
   '@kaiseki/gutenberg-hooks':
     specifier: 0.1.0-alpha7
@@ -993,7 +997,7 @@ packages:
   /@types/hoist-non-react-statics@3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
-      '@types/react': 18.2.6
+      '@types/react': 18.0.17
       hoist-non-react-statics: 3.3.2
     dev: true
 
@@ -1052,12 +1056,12 @@ packages:
   /@types/react-dom@18.2.4:
     resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
     dependencies:
-      '@types/react': 18.2.6
+      '@types/react': 18.0.17
 
   /@types/react-transition-group@4.4.6:
     resolution: {integrity: sha512-VnCdSxfcm08KjsJVQcfBmhEQAPnLB8G08hAxn39azX1qYBQ/5RVQuoHuKIcfKOdncuaUvEpFKFzEvbtIMsfVew==}
     dependencies:
-      '@types/react': 18.2.6
+      '@types/react': 18.0.17
     dev: false
 
   /@types/react@17.0.59:
@@ -1120,7 +1124,7 @@ packages:
   /@types/wordpress__blocks@12.5.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-SGuNlBUYlzZTJmuc/iCfYGAj7QzLXxcJShSMPdPjay8k52Zy9PvCOcie+owpi2EHPZADAKhLrSzQFUh1F2F7PA==}
     dependencies:
-      '@types/react': 18.2.6
+      '@types/react': 18.0.17
       '@types/wordpress__components': 19.10.3(react-dom@18.2.0)(react@18.2.0)
       '@types/wordpress__shortcode': 2.3.3
       '@wordpress/data': 8.6.0(react@18.2.0)
@@ -1213,7 +1217,7 @@ packages:
   /@types/wordpress__rich-text@6.4.0(react@18.2.0):
     resolution: {integrity: sha512-xG+4ALsKVj4I6N7GXAvhxvobgri39rjiKBGRM1UTo02jFGVBQcE4ICSsggkZ/fox5WJwdk1vmWLFuQAGTNb7nw==}
     dependencies:
-      '@types/react': 18.2.6
+      '@types/react': 18.0.17
       '@wordpress/data': 8.6.0(react@18.2.0)
     transitivePeerDependencies:
       - react
@@ -1998,7 +2002,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.5
       moment: 2.29.4
-      moment-timezone: 0.5.43
+      moment-timezone: 0.5.37
     dev: false
 
   /@wordpress/deprecated@3.33.0:
@@ -2077,8 +2081,8 @@ packages:
       '@wordpress/escape-html': 2.33.0
       change-case: 4.1.2
       is-plain-object: 5.0.0
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /@wordpress/element@4.4.1:
@@ -2090,8 +2094,8 @@ packages:
       '@types/react-dom': 17.0.20
       '@wordpress/escape-html': 2.33.0
       lodash: 4.17.21
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   /@wordpress/element@5.10.0:
     resolution: {integrity: sha512-tYtgoPMq1Dv2TqUBgHCK8wqKL8q6gCzcAhmnD+Gtet+I8ASc2SDVXtUdwZ3bwL65ab5RTac/kOwm52bns4a2jw==}
@@ -5423,16 +5427,6 @@ packages:
       react-with-styles-interface-css: 6.0.0(@babel/runtime@7.21.5)(react-with-styles@4.2.0)
     dev: false
 
-  /react-dom@17.0.2(react@17.0.2):
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
-    peerDependencies:
-      react: 17.0.2
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
-
   /react-dom@18.2.0(react@18.2.0):
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
@@ -5633,13 +5627,6 @@ packages:
       react: 18.2.0
       react-with-direction: 1.4.0(react-dom@18.2.0)(react@18.2.0)
     dev: false
-
-  /react@17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
 
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
@@ -5936,12 +5923,6 @@ packages:
 
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
-
-  /scheduler@0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
 
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
