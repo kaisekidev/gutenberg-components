@@ -1,5 +1,7 @@
 module.exports = {
-  extends: ['eslint-config-woda/typescript'],
+  extends: [
+    'eslint-config-woda/typescript',
+  ],
   rules: {
     'implicit-arrow-linebreak': 'off',
     'import/extensions': [

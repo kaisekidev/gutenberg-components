@@ -65,10 +65,11 @@ export default function Preview({
         },
         onError(error) {
           removeNotice && removeNotice(ERROR_NOTICE_ID);
-          createErrorNotice && createErrorNotice(error, {
-            id: ERROR_NOTICE_ID,
-            isDismissible: false,
-          });
+          createErrorNotice
+            && createErrorNotice(error, {
+              id: ERROR_NOTICE_ID,
+              isDismissible: false,
+            });
         },
       });
     },

@@ -1,5 +1,5 @@
 import { DateTimePicker, DateTimePicker as WpDateTimePicker } from '@wordpress/components';
-import { __experimentalGetSettings } from '@wordpress/date';
+import { DateSettings, __experimentalGetSettings } from '@wordpress/date';
 import moment from 'moment-timezone';
 
 export interface DatePickerProps extends Omit<WpDateTimePicker.Props, 'onChange'> {
@@ -25,7 +25,7 @@ const isFutureDate = (checkDate: Date, includeToday = false) => {
 };
 
 const dateToGmt = (date: string, format: string) => {
-  const dateSettings = __experimentalGetSettings();
+  const dateSettings = __experimentalGetSettings() as DateSettings;
   if (dateSettings.timezone.string) {
     const localDate = moment.tz(date, dateSettings.timezone.string);
     const gmtDate = localDate.clone().tz('GMT');

@@ -72,7 +72,9 @@ const RemoveButton = styled(Button)`
 
     padding: 0 2px;
     cursor: pointer;
+
     ${sharedStyle}
+
     svg {
       width: 24px;
       height: 24px;

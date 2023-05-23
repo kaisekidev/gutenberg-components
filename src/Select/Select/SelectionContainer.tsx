@@ -26,8 +26,8 @@ interface SelectionContainerProps<Option = unknown> extends ContainerProps {
 const Container = styled.div<ContainerProps>`
   display: flex;
 
-  flex-flow: ${(props) => (props.withOneTokenPerLine ? "column" : "row")};
-  flex-wrap: ${(props) => (props.withOneTokenPerLine ? "nowrap" : "wrap")};
+  flex-flow: ${(props) => (props.withOneTokenPerLine ? 'column' : 'row')};
+  flex-wrap: ${(props) => (props.withOneTokenPerLine ? 'nowrap' : 'wrap')};
 
   margin-top: 8px;
   margin-bottom: 16px;
@@ -35,7 +35,7 @@ const Container = styled.div<ContainerProps>`
   max-height: 400px;
 
   overflow-y: auto;
-  gap: ${(props) => (props.withOneTokenPerLine || props.withFullWidthTokens ? "8px" : "4px")};
+  gap: ${(props) => (props.withOneTokenPerLine || props.withFullWidthTokens ? '8px' : '4px')};
 `;
 
 export default function SelectionContainer<Option = Schema.Post<'edit'>>({

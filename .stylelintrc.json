@@ -1,7 +1,6 @@
 {
   "extends": [
-    "stylelint-config-woda",
-    "stylelint-config-styled-components"
+    "stylelint-config-woda"
   ],
   "rules": {
     "custom-property-no-missing-var-function": null,
@@ -10,5 +9,5 @@
     "unit-no-unknown": null,
     "value-keyword-case": null
   },
-  "customSyntax": "@stylelint/postcss-css-in-js"
+  "customSyntax": "postcss-styled-syntax"
 }

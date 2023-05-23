@@ -1,4 +1,4 @@
-import { format, __experimentalGetSettings } from '@wordpress/date';
+import { format, __experimentalGetSettings, DateSettings } from '@wordpress/date';
 import { __ } from '@wordpress/i18n';
 
 export interface DateButtonLabelProps {
@@ -14,7 +14,7 @@ export default function DateButtonLabel({
   emptyLabel,
   dateFormat = 'F j, Y',
 }: DateButtonLabelProps) {
-  const settings = __experimentalGetSettings();
+  const settings = __experimentalGetSettings() as DateSettings;
   const label = emptyLabel || __('Pick date');
   return (
     <span>
