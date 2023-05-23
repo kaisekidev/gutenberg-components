@@ -39,7 +39,7 @@
     "typescript"
   ],
   "dependencies": {
-    "@kaiseki/gutenberg-hooks": "0.1.0-alpha6",
+    "@kaiseki/gutenberg-hooks": "0.1.0-alpha7",
     "@kaiseki/gutenberg-styles": "0.1.0-alpha2",
     "@wordpress/api-fetch": "wp-6.0",
     "@wordpress/blob": "wp-6.0",
