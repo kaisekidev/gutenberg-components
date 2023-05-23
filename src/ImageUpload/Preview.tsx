@@ -64,9 +64,8 @@ export default function Preview({
           setIsLoading(false);
         },
         onError(error) {
-          const { message } = error;
-          removeNotice(ERROR_NOTICE_ID);
-          createErrorNotice(message, {
+          removeNotice && removeNotice(ERROR_NOTICE_ID);
+          createErrorNotice && createErrorNotice(error, {
             id: ERROR_NOTICE_ID,
             isDismissible: false,
           });
