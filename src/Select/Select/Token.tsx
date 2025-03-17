@@ -2,7 +2,6 @@ import { colors, variables } from '@kaiseki/gutenberg-styles';
 import { Button } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 import { closeSmall } from '@wordpress/icons';
-import { noop } from 'lodash';
 import { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
@@ -90,8 +89,8 @@ export default function Token<Option = unknown>({
   value,
   label,
   onClickRemove,
-  onMouseEnter = noop,
-  onMouseLeave = noop,
+  onMouseEnter = () => {},
+  onMouseLeave = () => {},
   removeMessage = __('Remove item'),
   grow = false,
 }: TokenProps<Option>) {

@@ -7,7 +7,6 @@ import { Schema } from '@wordpress/core-data';
 import { useDispatch } from '@wordpress/data';
 import { mediaUpload } from '@wordpress/editor';
 import { __ } from '@wordpress/i18n';
-import noop from 'lodash/noop';
 import { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import { SetOptional, SetRequired } from 'type-fest';
@@ -65,12 +64,12 @@ export default function Preview({
           setIsLoading(false);
         },
         onError(error) {
-          removeNotice && removeNotice(ERROR_NOTICE_ID).catch(noop);
+          removeNotice && removeNotice(ERROR_NOTICE_ID).catch(() => {});
           createErrorNotice
             && createErrorNotice(error, {
               id: ERROR_NOTICE_ID,
               isDismissible: false,
-            }).catch(noop);
+            }).catch(() => {});
         },
       });
     },
